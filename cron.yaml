@@ -1,0 +1,64 @@
+cron:
+- description: five minutely running
+  url: /
+  schedule: every 5 minutes
+- description: clear out recent delicious once a week
+  url: /clearrecentdelicious
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: twitter-auto-sharer every 5 mins
+  url: /twitter-auto-sharer
+  schedule: every 5 minutes
+- description: clear out twitter-auto-sharer once a week
+  url: /twitter-auto-sharer-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: amazon-top-video-games every 5 mins
+  url: /amazon-top-video-games
+  schedule: every 5 minutes
+- description: clear out amazon-top-video-games once a week
+  url: /amazon-top-video-games-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: dealcatcher-popular-import every 5 mins
+  url: /dealcatcher-popular-import
+  schedule: every 5 minutes
+- description: clear out dealcatcher-popular-import once a week
+  url: /dealcatcher-popular-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: hulu-popular-riveti-import every 60 mins
+  url: /hulu-popular-riveti-import
+  schedule: every 60 minutes
+- description: clear out hulu-popular-riveti-import once a week
+  url: /hulu-popular-riveti-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: itunes-music-import every 5 mins
+  url: /itunes-music-import
+  schedule: every 5 minutes
+- description: clear out itunes-music-import once a week
+  url: /itunes-music-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: rotten-tomatoes-search-import every 5 mins
+  url: /rotten-tomatoes-search-import
+  schedule: every 5 minutes
+- description: clear out rotten-tomatoes-search-import once a week
+  url: /rotten-tomatoes-search-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: yelp-events-riveti-import every 5 mins
+  url: /yelp-events-riveti-import
+  schedule: every 5 minutes
+- description: clear out yelp-events-riveti-import once a week
+  url: /yelp-events-riveti-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
+- description: youtube-popular-riveti-import every 5 mins
+  url: /youtube-popular-riveti-import
+  schedule: every 5 minutes
+- description: clear out youtube-popular-riveti-import once a week
+  url: /youtube-popular-riveti-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver
