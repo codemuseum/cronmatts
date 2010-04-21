@@ -62,3 +62,10 @@ cron:
   url: /youtube-popular-riveti-import-clear
   schedule: every friday 22:00
   timezone: America/Vancouver
+- description: eventbrite-events-import every 5 mins
+  url: /eventbrite-events-import
+  schedule: every 5 minutes
+- description: clear out eventbrite-events-import once a week
+  url: /eventbrite-events-import-clear
+  schedule: every friday 22:00
+  timezone: America/Vancouver

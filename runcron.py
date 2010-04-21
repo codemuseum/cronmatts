@@ -110,6 +110,18 @@ class YoutubePopularRivetiImportClearer(webapp.RequestHandler):
     self.response.headers['Content-Type'] = 'text/plain'
     self.response.out.write(str(result.status_code) + ' :: ' + result.content)
 
+class EventbriteEventsImport(webapp.RequestHandler):
+  def get(self):
+    result = urlfetch.fetch(url='http://eventbrite-events-import.heroku.com/crawls', method=urlfetch.POST, follow_redirects=False)
+    self.response.headers['Content-Type'] = 'text/plain'
+    self.response.out.write(str(result.status_code) + ' :: ' + result.content)
+
+class EventbriteEventsImportClearer(webapp.RequestHandler):
+  def get(self):
+    result = urlfetch.fetch(url='http://eventbrite-events-import.heroku.com/crawls/1?_method=delete', method=urlfetch.POST, follow_redirects=False)
+    self.response.headers['Content-Type'] = 'text/plain'
+    self.response.out.write(str(result.status_code) + ' :: ' + result.content)
+
 
 
 application = webapp.WSGIApplication(
@@ -121,7 +133,8 @@ application = webapp.WSGIApplication(
                                       ('/itunes-music-import', ItunesMusicImport), ('/itunes-music-import-clear', ItunesMusicImportClearer), 
                                       ('/rotten-tomatoes-search-import', RottenTomatoesSearchImport), ('/rotten-tomatoes-search-import-clear', RottenTomatoesSearchImportClearer), 
                                       ('/yelp-events-riveti-import', YelpEventsRivetiImport), ('/yelp-events-riveti-import-clear', YelpEventsRivetiImportClearer), 
-                                      ('/youtube-popular-riveti-import', YoutubePopularRivetiImport), ('/youtube-popular-riveti-import-clear', YoutubePopularRivetiImportClearer)],
+                                      ('/youtube-popular-riveti-import', YoutubePopularRivetiImport), ('/youtube-popular-riveti-import-clear', YoutubePopularRivetiImportClearer), 
+                                      ('/eventbrite-events-import', EventbriteEventsImport), ('/eventbrite-events-import-clear', EventbriteEventsImportClearer)],
                                      debug=True)
 
 def main():
