@@ -52,13 +52,13 @@ class DealcatcherPopularImportClearer(webapp.RequestHandler):
 
 class HuluPopularRivetiImport(webapp.RequestHandler):
   def get(self):
-    result = urlfetch.fetch(url='http://hulu-popular-riveti-import.heroku.com/crawls', method=urlfetch.POST, follow_redirects=False)
+    result = urlfetch.fetch(url='http://hulu-popular-import.heroku.com/crawls', method=urlfetch.POST, follow_redirects=False)
     self.response.headers['Content-Type'] = 'text/plain'
     self.response.out.write(str(result.status_code) + ' :: ' + result.content)
 
 class HuluPopularRivetiImportClearer(webapp.RequestHandler):
   def get(self):
-    result = urlfetch.fetch(url='http://hulu-popular-riveti-import.heroku.com/crawls/1?_method=delete', method=urlfetch.POST, follow_redirects=False)
+    result = urlfetch.fetch(url='http://hulu-popular-import.heroku.com/crawls/1?_method=delete', method=urlfetch.POST, follow_redirects=False)
     self.response.headers['Content-Type'] = 'text/plain'
     self.response.out.write(str(result.status_code) + ' :: ' + result.content)
 
